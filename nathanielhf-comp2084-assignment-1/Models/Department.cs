@@ -19,15 +19,18 @@ namespace nathanielhf_comp2084_assignment_1.Models
 
         [Required]
         [StringLength(50)]
+        [Display(Name="Department")]
         public string name { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name ="Storage Type")]
         public string storage_type { get; set; }
 
         [Column("aisle number")]
         [Required]
         [StringLength(2)]
+        [Display(Name ="Aisle Number")]
         public string aisle_number { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
