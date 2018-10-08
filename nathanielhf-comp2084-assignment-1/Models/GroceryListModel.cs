@@ -30,10 +30,6 @@ namespace nathanielhf_comp2084_assignment_1.Models
                 .IsFixedLength();
 
             modelBuilder.Entity<Department>()
-                .HasOptional(e => e.Departments1)
-                .WithRequired(e => e.Department1);
-
-            modelBuilder.Entity<Department>()
                 .HasMany(e => e.Items)
                 .WithRequired(e => e.Department)
                 .WillCascadeOnDelete(false);

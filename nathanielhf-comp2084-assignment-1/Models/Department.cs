@@ -30,10 +30,6 @@ namespace nathanielhf_comp2084_assignment_1.Models
         [StringLength(2)]
         public string aisle_number { get; set; }
 
-        public virtual Department Departments1 { get; set; }
-
-        public virtual Department Department1 { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Item> Items { get; set; }
     }
