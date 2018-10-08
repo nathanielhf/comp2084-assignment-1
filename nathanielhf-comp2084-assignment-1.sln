@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nathanielhf-comp2084-assignment-1", "nathanielhf-comp2084-assignment-1\nathanielhf-comp2084-assignment-1.csproj", "{17FEB865-5CD9-45E0-8896-1BC3A3BD5262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nathanielhf-comp2084-assignment-1.Tests", "nathanielhf-comp2084-assignment-1.Tests\nathanielhf-comp2084-assignment-1.Tests.csproj", "{59C531D7-4299-4BBC-A11A-66AB55F9274B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17FEB865-5CD9-45E0-8896-1BC3A3BD5262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FEB865-5CD9-45E0-8896-1BC3A3BD5262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FEB865-5CD9-45E0-8896-1BC3A3BD5262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FEB865-5CD9-45E0-8896-1BC3A3BD5262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C531D7-4299-4BBC-A11A-66AB55F9274B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C531D7-4299-4BBC-A11A-66AB55F9274B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C531D7-4299-4BBC-A11A-66AB55F9274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C531D7-4299-4BBC-A11A-66AB55F9274B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EC724FD-E795-42A8-869A-266BA91C2469}
+	EndGlobalSection
+EndGlobal
