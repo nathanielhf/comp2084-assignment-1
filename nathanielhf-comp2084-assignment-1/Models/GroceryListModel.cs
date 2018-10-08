@@ -44,7 +44,7 @@ namespace nathanielhf_comp2084_assignment_1.Models
 
             modelBuilder.Entity<Item>()
                 .Property(e => e.price)
-                .HasPrecision(4, 2);
+                .HasPrecision(6, 2);
         }
     }
 }

@@ -52,6 +52,21 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
         {
             if (ModelState.IsValid)
             {
+                // upload image if there is one
+                if (Request.Files.Count > 0)
+                {
+                    var file = Request.Files[0];
+
+                    if (file.FileName != null && file.ContentLength > 0)
+                    {
+                        // get file path dynamically
+                        string path = Server.MapPath("~/Content/Images/") + file.FileName;
+                        file.SaveAs(path);
+
+                        item.image = "/Content/Images/" + file.FileName;
+                    }
+                }
+
                 db.Items.Add(item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -86,6 +101,21 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
         {
             if (ModelState.IsValid)
             {
+                // upload image if there is one
+                if (Request.Files.Count > 0)
+                {
+                    var file = Request.Files[0];
+
+                    if (file.FileName != null && file.ContentLength > 0)
+                    {
+                        // get file path dynamically
+                        string path = Server.MapPath("~/Content/Images/") + file.FileName;
+                        file.SaveAs(path);
+
+                        item.image = "/Content/Images/" + file.FileName;
+                    }
+                }
+
                 db.Entry(item).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
