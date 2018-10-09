@@ -1,0 +1,114 @@
+﻿/*
+black:      #242221
+green:      #0b421a 11,66,26
+tan:        #eac784
+hover:tan:  #ebd4a8
+brown:      #362415 56,34,21
+*/
+
+p {
+    color: #242221;
+}
+
+h1, h2, h3, h4, h5, h5, th {
+    color: #0b421a;
+}
+
+.navbar-opaque-bg {
+    background: white;
+    z-index: 10;
+}
+
+.navbar {
+    background-color: #f5f3f3;
+    border-top: 5px solid #0b421a;
+}
+
+    .navbar a, .navbar .navbar-collapse ul li > a {
+        color: #242221;
+        background-color: transparent;
+        /*border-radius: 6px;*/
+    }
+
+        .navbar a:hover, .navbar .navbar-collapse ul li > a:hover {
+            /*text-decoration: underline #0b421a  ;*/
+            border-bottom: 2px solid #eac784;
+            /*color: #0b421a;*/
+        }
+
+        .navbar .navbar-collapse ul li > a:hover {
+            padding-bottom: 13px;
+        }
+
+.container .jumbotron {
+    background: #fffcfc;
+    text-align: center;
+    padding-top: 30px
+}
+
+.shadow-border {
+    box-shadow: 1px 1px 5px rgba(54,34,21,0.8);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.jumbotron h1 {
+    color: #0b421a;
+    border-bottom: 1px #0b421a solid;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tan-btn {
+    background-color: #362415;
+    color: #fffcfc;
+    /*padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;*/
+}
+
+    .tan-btn:hover {
+        background-color: #72655b;
+        color: #fffcfc;
+        text-decoration: none;
+    }
+
+.make-btn-here a {
+    color: #fffcfc;
+    background-color: #362415;
+    border-radius: 3px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+}
+
+    .make-btn-here a:hover {
+        background-color: #72655b;
+        color: #fffcfc;
+        text-decoration: none;
+    }
+
+p a, td a {
+    background-color: #362415;
+    color: #fffcfc;
+    padding: 5px 10px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+    p a:hover, td a:hover {
+        background-color: #72655b;
+        color: #fffcfc;
+        text-decoration: none;
+    }
+
+    p a.no-btn {
+        color: #337ab7;
+        background-color: #fffcfc;
+        padding: 0px;
+        line-height: normal;
+    }
