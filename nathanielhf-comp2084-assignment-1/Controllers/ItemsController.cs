@@ -10,10 +10,12 @@ using nathanielhf_comp2084_assignment_1.Models;
 
 namespace nathanielhf_comp2084_assignment_1.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class ItemsController : Controller
     {
         private GroceryListModel db = new GroceryListModel();
 
+        [AllowAnonymous]
         // GET: Items
         public ActionResult Index()
         {
@@ -21,6 +23,7 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
             return View(items.ToList());
         }
 
+        [AllowAnonymous]
         // GET: Items/Details/5
         public ActionResult Details(int? id)
         {

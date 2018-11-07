@@ -7,9 +7,11 @@
 
 <h2>Items</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if(User.Identity.IsAuthenticated) { 
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -42,9 +44,13 @@
             @Html.DisplayFor(modelItem => item.price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.item_id })  
+            @if(User.Identity.IsAuthenticated) { 
+                @Html.ActionLink("Edit", "Edit", new { id=item.item_id })  
+            }
             @Html.ActionLink("Details", "Details", new { id=item.item_id })  
-            @Html.ActionLink("Delete", "Delete", new { id=item.item_id })
+            @if(User.Identity.IsAuthenticated) { 
+                @Html.ActionLink("Delete", "Delete", new { id=item.item_id })
+            }
         </td>
     </tr>
 }
