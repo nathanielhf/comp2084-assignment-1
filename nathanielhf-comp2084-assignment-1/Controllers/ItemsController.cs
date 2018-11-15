@@ -10,7 +10,7 @@ using nathanielhf_comp2084_assignment_1.Models;
 
 namespace nathanielhf_comp2084_assignment_1.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    [Authorize]
     public class ItemsController : Controller
     {
         private GroceryListModel db = new GroceryListModel();
