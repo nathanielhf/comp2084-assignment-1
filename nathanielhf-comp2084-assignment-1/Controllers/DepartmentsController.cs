@@ -63,6 +63,8 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
         // GET: Departments/Create
         public ActionResult Create()
         {
+            ViewBag.item_id = new SelectList(db.Items.OrderBy(i => i.name), "ItemId", "Name");
+
             return View("Create");
         }
 
@@ -78,6 +80,8 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
                 db.Save(department);
                 return RedirectToAction("Index");
             }
+            ViewBag.item_id = new SelectList(db.Items.OrderBy(i => i.name), "ItemId", "Name");
+
             return View("Create", department);
         }
 
@@ -97,7 +101,8 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
                 //return HttpNotFound();
                 return View("Error");
             }
-            
+            ViewBag.item_id = new SelectList(db.Items.OrderBy(i => i.name), "ItemId", "Name");
+
             return View("Edit", department);
         }
 
@@ -115,7 +120,8 @@ namespace nathanielhf_comp2084_assignment_1.Controllers
             }
             //db.Entry(department).State = EntityState.Modified;
             //db.SaveChanges();
-            
+            ViewBag.item_id = new SelectList(db.Items.OrderBy(i => i.name), "ItemId", "Name");
+
             return View("Edit", department);
         }
 

@@ -86,6 +86,16 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
             // assert
             Assert.AreEqual("Create", result.ViewName);
         }
+
+        [TestMethod]
+        public void CreateItemViewBagNotNull()
+        {
+            //act
+            var result = ((ViewResult)controller.Create());
+
+            //assert
+            Assert.IsNotNull(result.ViewBag.item_id);
+        }
         #endregion
 
         // POST: Departments/Create
@@ -99,6 +109,22 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
 
             // assert
             Assert.AreEqual("Index", result.RouteValues["action"]);
+        }
+
+        // Check ViewBag values(2) - For Item
+        [TestMethod]
+        public void CheckViewBagValueForItem()
+        {
+            // arrange
+            Department invalidDepartment = new Department();
+
+
+            // act
+            //controller.ModelState.AddModelError("some error name", "fake error description");
+            ViewResult result = (ViewResult)controller.Create(invalidDepartment);
+
+            // assert
+            Assert.IsNotNull(result.ViewBag.item_id);
         }
         #endregion
 
@@ -256,6 +282,16 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
             // assert
             Assert.AreEqual("Edit", result.ViewName);
         }
+
+        [TestMethod]
+        public void EditViewBagItem()
+        {
+            // act
+            ViewResult result = (ViewResult)controller.Edit(1);
+
+            // assert
+            Assert.IsNotNull(result.ViewBag.item_id);
+        }
         #endregion
 
         // POST: Departments/Edit
@@ -288,7 +324,7 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
         [TestMethod]
         public void EditModelInvalidReturnView()
         {
-            controller.ModelState.AddModelError("Error", "Error thing");
+            //controller.ModelState.AddModelError("Error", "Error thing");
             Department testDepartment = new Department { department_id = 1 };
 
             // act
@@ -303,7 +339,7 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
         public void EditModelInvalidReloadDepartment()
         {
             // arrange
-            controller.ModelState.AddModelError("Error", "Error thing");
+            //controller.ModelState.AddModelError("Error", "Error thing");
             Department testDepartment = new Department { department_id = 1 };
 
             // act
@@ -311,6 +347,19 @@ namespace nathanielhf_comp2084_assignment_1.Tests.Controllers
 
             // assert
             Assert.AreEqual(testDepartment, result);
+        }
+
+        //If Model invalid, check viewbag values items
+        [TestMethod]
+        public void EditCheckViewBagValuesArtist()
+        {
+            //act arrange 
+            //controller.ModelState.AddModelError("Error", "Error thing");
+            Department testDepartment = new Department{ department_id = 1 };
+            ViewResult result = (ViewResult)controller.Edit(testDepartment);
+
+            //assert
+            Assert.IsNotNull(result.ViewBag.item_id);
         }
         #endregion
     }

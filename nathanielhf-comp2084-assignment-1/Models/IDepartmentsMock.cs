@@ -9,6 +9,7 @@ namespace nathanielhf_comp2084_assignment_1.Models
     public interface IDepartmentsMock
     {
         IQueryable<Department> Departments { get; }
+        IQueryable<Item> Items { get; }
         Department Save(Department department);
         void Delete(Department department);
     }

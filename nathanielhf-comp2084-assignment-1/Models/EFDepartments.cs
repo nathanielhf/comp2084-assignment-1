@@ -11,6 +11,7 @@ namespace nathanielhf_comp2084_assignment_1.Models
         private GroceryListModel db = new GroceryListModel();
 
         public IQueryable<Department> Departments { get { return db.Departments; } }
+        public IQueryable<Item> Items { get { return db.Items; } }
 
         public void Delete(Department department)
         {
