@@ -2,4 +2,4 @@
 
 <p>This site is built by Nathaniel Fisher in COMP2084 using ASP.NET MVC, SQL Server, Entity Framework, and Microsoft Azure</p>
 <p>Styles for the customized visual presentation can be found in the file titled "/Content/nathanielsStyles.css"</p>
-<p>This site is hosted live at http://nhfcomp2084assignment.gearhostpreview.com</p>
+<p>This site is hosted live at http://nhfcomp2084assignment1.gearhostpreview.com</p>
